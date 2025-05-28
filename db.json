@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "username": "123",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "username": "Daniel",
+      "password": "123",
+      "id": 2,
+      "title": "Test 2",
+      "userID": "2"
+    }
+  ],
+  "notes": [
+    {
+      "subject": "Note",
+      "content": "This is an example note.",
+      "catID": 0,
+      "userID": 0,
+      "created": "2025-05-26T16:53:41.759Z",
+      "updated": "2025-05-28T02:02:04.393Z",
+      "id": 1
+    },
+    {
+      "subject": "Test",
+      "content": "This is a test.",
+      "catID": 0,
+      "userID": "2",
+      "created": "2025-05-27T02:04:10.807Z",
+      "updated": "2025-05-27T02:04:10.807Z",
+      "id": 2
+    },
+    {
+      "subject": "Cat3",
+      "content": "This note is in cat3",
+      "catID": "3",
+      "userID": "2",
+      "created": "2025-05-28T02:04:24.657Z",
+      "updated": "2025-05-28T16:55:12.428Z",
+      "id": 3
+    },
+    {
+      "subject": "Category 2",
+      "content": "This note is in the second category.",
+      "catID": "2",
+      "userID": "2",
+      "created": "2025-05-28T02:05:02.893Z",
+      "updated": "2025-05-28T17:07:15.454Z",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "title": "Test",
+      "userID": "2",
+      "id": 1
+    },
+    {
+      "title": "Test category 2",
+      "userID": "2",
+      "id": 2
+    },
+    {
+      "title": "Third Category",
+      "userID": "2",
+      "id": 3
+    }
+  ]
+}
