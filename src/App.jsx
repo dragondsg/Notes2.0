@@ -29,7 +29,6 @@ function App() {
           onChange={(e) => {
             setCurrentCategory(e.target.value);
             localStorage.setItem('category', e.target.value);
-            console.log(currentCategory);
           }}>
             <option value={0}>All</option>
             {a.allCategories

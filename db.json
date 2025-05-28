@@ -26,10 +26,10 @@
     {
       "subject": "Test",
       "content": "This is a test.",
-      "catID": 0,
+      "catID": "0",
       "userID": "2",
       "created": "2025-05-27T02:04:10.807Z",
-      "updated": "2025-05-27T02:04:10.807Z",
+      "updated": "2025-05-28T17:31:23.622Z",
       "id": 2
     },
     {
@@ -47,13 +47,22 @@
       "catID": "2",
       "userID": "2",
       "created": "2025-05-28T02:05:02.893Z",
-      "updated": "2025-05-28T17:07:15.454Z",
+      "updated": "2025-05-28T17:38:40.816Z",
       "id": 4
+    },
+    {
+      "subject": "Cat 1",
+      "content": "This note is in cat 1",
+      "catID": "1",
+      "userID": "2",
+      "created": "2025-05-28T17:36:31.407Z",
+      "updated": "2025-05-28T17:37:21.817Z",
+      "id": 5
     }
   ],
   "categories": [
     {
-      "title": "Test",
+      "title": "Cat 1",
       "userID": "2",
       "id": 1
     },

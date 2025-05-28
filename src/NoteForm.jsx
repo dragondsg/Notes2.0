@@ -33,6 +33,7 @@ function NoteForm() {
                 let tn = (a.allNotes.filter((n) => n.id == id)[0]);
                 setSubject(tn.subject);
                 setContent(tn.content);
+                setCurrentCategory(tn.catID);
             });
         }
     }, []);
@@ -65,6 +66,17 @@ function NoteForm() {
                     setContent(e.target.value);
                 }}
             ></input>
+            <select
+                value={currentCategory}
+                onChange={(e) => {
+                    setCurrentCategory(e.target.value);
+                    localStorage.setItem('category', e.target.value);
+                }}>
+                    <option value={'0'}>None</option>
+                    {a.allCategories
+                        .filter((cat) => cat.userID == userId)
+                        .map((cat) => <option key={cat.id} value={cat.id}>{cat.title}</option>)}
+            </select>
             <div>
                 <button type="submit">Save</button>
                 <button type="button" onClick={()=>{
