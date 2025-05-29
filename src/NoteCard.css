@@ -1,0 +1,12 @@
+a {
+    text-decoration: none;
+}
+.noteCardBody {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    color: black;
+    padding: 5px;
+    width: 240px;
+    min-height: 240px;
+}

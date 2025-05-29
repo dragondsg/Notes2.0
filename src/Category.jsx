@@ -19,7 +19,9 @@ function Category () {
         setUserId(localStorage.getItem('id'));
 
         setId().then((id) => {
-            setName(a.allCategories.filter((c) => c.id == id)[0].title);
+            if (id != 0) {
+                setName(a.allCategories.filter((c) => c.id == id)[0].title);
+            }
         });
     }, []);
 

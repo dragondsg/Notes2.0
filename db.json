@@ -17,20 +17,11 @@
     {
       "subject": "Note",
       "content": "This is an example note.",
-      "catID": 0,
+      "catID": "0",
       "userID": 0,
       "created": "2025-05-26T16:53:41.759Z",
-      "updated": "2025-05-28T02:02:04.393Z",
+      "updated": "2025-05-28T20:06:24.173Z",
       "id": 1
-    },
-    {
-      "subject": "Test",
-      "content": "This is a test.",
-      "catID": "0",
-      "userID": "2",
-      "created": "2025-05-27T02:04:10.807Z",
-      "updated": "2025-05-28T17:31:23.622Z",
-      "id": 2
     },
     {
       "subject": "Cat3",
@@ -38,7 +29,7 @@
       "catID": "3",
       "userID": "2",
       "created": "2025-05-28T02:04:24.657Z",
-      "updated": "2025-05-28T16:55:12.428Z",
+      "updated": "2025-05-28T18:57:49.286Z",
       "id": 3
     },
     {
@@ -47,7 +38,7 @@
       "catID": "2",
       "userID": "2",
       "created": "2025-05-28T02:05:02.893Z",
-      "updated": "2025-05-28T17:38:40.816Z",
+      "updated": "2025-05-28T18:46:43.390Z",
       "id": 4
     },
     {
@@ -62,7 +53,7 @@
   ],
   "categories": [
     {
-      "title": "Cat 1",
+      "title": "Category 1",
       "userID": "2",
       "id": 1
     },

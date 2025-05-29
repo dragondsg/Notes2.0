@@ -23,30 +23,34 @@ function App() {
   return (
     <>
       <div className={"header"}>
+        <div>
+          <select
+            value={currentCategory}
+            onChange={(e) => {
+              setCurrentCategory(e.target.value);
+              localStorage.setItem('category', e.target.value);
+            }}>
+              <option value={0}>All</option>
+              {a.allCategories
+                .filter((cat) => cat.userID == userId)
+                .map((cat) => <option key={cat.id} value={cat.id}>{cat.title}</option>)}
+          </select>
+          <button
+            onClick={ ()=>{
+              navigate('/categories');
+            } }>Edit Category</button>
+        </div>
         <h2>{username}'s Notes</h2>
-        <select
-          value={currentCategory}
-          onChange={(e) => {
-            setCurrentCategory(e.target.value);
-            localStorage.setItem('category', e.target.value);
-          }}>
-            <option value={0}>All</option>
-            {a.allCategories
-              .filter((cat) => cat.userID == userId)
-              .map((cat) => <option key={cat.id} value={cat.id}>{cat.title}</option>)}
-        </select>
-        <button
-          onClick={ ()=>{
-            navigate('/');
-          } }>Log Out</button>
-        <button
-          onClick={ ()=>{
-            navigate('/notes/?note=newNote');
-          } }>New Note</button>
-        <button
-          onClick={ ()=>{
-            navigate('/categories');
-          } }>Edit Category</button>
+        <div>
+          <button
+            onClick={ ()=>{
+              navigate('/');
+            } }>Log Out</button>
+          <button
+            onClick={ ()=>{
+              navigate('/notes/?note=newNote');
+            } }>New Note</button>
+        </div>
       </div>
       <div className={"noteBody"}>
         {a.allNotes

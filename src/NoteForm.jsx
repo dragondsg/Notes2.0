@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { NotesContext } from "./provider.jsx";
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import './NoteForm.css'
 
 const usePage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -41,6 +42,7 @@ function NoteForm() {
     return (
     <>
         <form
+            className={'noteForm'}
             onSubmit={(e) => {
                 e.preventDefault();
                 if (id == 'newNote') {
@@ -51,33 +53,35 @@ function NoteForm() {
                 navigate('/home');
             }}
         >
-            <input
-                className={'subjectInput'}
-                placeholder="Subject"
-                value={subject}
-                onChange={(e)=>{
-                    setSubject(e.target.value);
-                }}></input>
-            <input
-                className={'contentInput'}
-                placeholder="Your note here."
-                value={content}
-                onChange={(e)=>{
-                    setContent(e.target.value);
-                }}
-            ></input>
-            <select
-                value={currentCategory}
-                onChange={(e) => {
-                    setCurrentCategory(e.target.value);
-                    localStorage.setItem('category', e.target.value);
-                }}>
-                    <option value={'0'}>None</option>
-                    {a.allCategories
-                        .filter((cat) => cat.userID == userId)
-                        .map((cat) => <option key={cat.id} value={cat.id}>{cat.title}</option>)}
-            </select>
-            <div>
+            <div className={'inputs'}>
+                <input
+                    className={'subjectInput'}
+                    placeholder="Subject"
+                    value={subject}
+                    onChange={(e)=>{
+                        setSubject(e.target.value);
+                    }}></input>
+                <textarea
+                    className={'contentInput'}
+                    placeholder="Your note here."
+                    value={content}
+                    onChange={(e)=>{
+                        setContent(e.target.value);
+                    }}
+                ></textarea>
+            </div>
+            <div className={'buttonArea'}>
+                <select
+                    value={currentCategory}
+                    onChange={(e) => {
+                        setCurrentCategory(e.target.value);
+                        localStorage.setItem('category', e.target.value);
+                    }}>
+                        <option value={'0'}>None</option>
+                        {a.allCategories
+                            .filter((cat) => cat.userID == userId)
+                            .map((cat) => <option key={cat.id} value={cat.id}>{cat.title}</option>)}
+                </select>
                 <button type="submit">Save</button>
                 <button type="button" onClick={()=>{
                     if (id == 'newNote') {
@@ -88,7 +92,6 @@ function NoteForm() {
                         });
                     }
                 }}>Delete</button>
-                <div>Category Dropdown</div>
             </div>
         </form>
     </>
